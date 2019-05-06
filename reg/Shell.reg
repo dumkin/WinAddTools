@@ -1,0 +1,25 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPrompt]
+@="Command Prompt"
+"Icon"="cmd.exe"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPrompt\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bash]
+@="Bash"
+"Icon"="bash.exe"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bash\command]
+@="bash.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\PowerShellCustom]
+@="PowerShell"
+"Icon"="powershell.exe"
+"Position"="Top"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\PowerShellCustom\command]
+@="powershell.exe -noexit -command Set-Location -literalPath '%V'"
