@@ -1,25 +1,36 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPrompt]
-@="Command Prompt"
-"Icon"="cmd.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminalAllIn]
+@="Terminal All In"
+"Icon"="wt.exe"
 "Position"="Top"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminalAllIn\command]
+@="cmd.exe /s /c start wt.exe -d \"%V\"; new-tab -d \"%V\" wsl.exe"
 
-[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPrompt\command]
-@="cmd.exe /s /k pushd \"%V\""
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\Bash]
-@="Bash"
-"Icon"="bash.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal]
+@="Terminal"
+"Icon"="wt.exe"
 "Position"="Top"
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\Bash\command]
-@="bash.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal\command]
+@="cmd.exe /s /c start wt.exe -d \"%V\""
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\PowerShellCustom]
 @="PowerShell"
 "Icon"="powershell.exe"
 "Position"="Top"
-
 [HKEY_CLASSES_ROOT\Directory\Background\shell\PowerShellCustom\command]
 @="powershell.exe -noexit -command Set-Location -literalPath '%V'"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPrompt]
+@="Command Prompt"
+"Icon"="cmd.exe"
+"Position"="Top"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CommandPrompt\command]
+@="cmd.exe /s /k pushd \"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bash]
+@="Bash"
+;; "Icon"="ubuntu2004.exe"
+"Position"="Top"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Bash\command]
+@="wsl.exe --cd \"%V\""
